@@ -35,7 +35,6 @@ or you can use ``tgext.pluggable`` when available::
         'js_all': Bundle('javascript/jquery.js', 'javascript/bootstrap.min.js',
                          filters='rjsmin', output='assets/js_all.js')
     })
-)
 
 By default ``tgext.webassets`` will load and save assets inside the turbogears
 ``static_files`` path. Which is usually the ``public`` directory inside your
