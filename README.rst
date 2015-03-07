@@ -58,7 +58,7 @@ inside templates.
 Bundles
 -------
 
-``ŧgext.webassets`` accepts the bundles inside the ``bundles`` dictionary, each entry
+``ŧgext.webassets`` accepts the bundles inside the ``bundles`` dictionary. Each entry
 can be a ``Bundle`` instance or a `webassets loader <https://webassets.readthedocs.org/en/latest/loaders.html>`_
 in case you want to load bundles from a configuration file.
 
