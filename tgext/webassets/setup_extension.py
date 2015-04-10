@@ -4,7 +4,7 @@ from webassets import Environment, Bundle
 try:
     from urllib.parse import urlparse
 except ImportError:
-    from urllib import urlparse
+    from urlparse import urlparse
 
 from tg.configuration.utils import coerce_config
 from tg.support.converters import asbool, asint, aslist
@@ -20,9 +20,9 @@ class SetupExtension(object):
 
     def __call__(self):
         from tg import config
-        config['tg.app_globals'].webassets = self.make_webassets_env_from_config(self.options,
-                                                                                 config)
-
+        # Save as a class attribute so it is available between multiple app instances
+        config['tg.app_globals'].__class__.webassets = self.make_webassets_env_from_config(self.options,
+                                                                                           config)
     def string_or_bool(self, value):
         try:
             lowervalue = value.lower()
