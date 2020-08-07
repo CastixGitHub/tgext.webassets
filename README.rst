@@ -49,9 +49,9 @@ application.
 The webassets environment will then be available as ``tg.app_globals.webassets``, so you can
 use it inside your templates to load the assets::
 
-    <script py:for="asset_url in g.webassets.js_all.urls()" src="$asset_url"></script>
+    <script py:for="asset_url in g.webassets['js_all'].urls()" src="$asset_url"></script>
 
-Each registered bundle will be available as a property of the ``g.webassets`` object
+Each registered bundle will be available as a property of the Environment ``g.webassets`` object
 inside templates.
 
 Bundles
